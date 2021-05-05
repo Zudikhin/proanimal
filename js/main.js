@@ -2,70 +2,67 @@ $(document).ready(function () {
     "use strict";
 
     $(".header_content_btn").click(function() {
-        $(this).toggleClass('active');
-        // $(".header_drop").toggleClass("active");
-        // $("body").toggleClass("drop");
+        $(".dropdown").addClass("active");
     });
 
-    var ExpertHeightTopWave = $(".expert_top_wave").height();
-    var ExpertNegativeTopWave = "-" + ExpertHeightTopWave;
-    var ExpertNumNegativeTopWave = parseInt(ExpertNegativeTopWave);
-    if($(window).width() < 577) {
-        $(".expert_top_wave").css("top", ExpertNumNegativeTopWave);
-    } else if($(window).width() >= 768 && $(window).width() < 1024) {
-        var intervalExpert = (ExpertHeightTopWave * 75)/100;
-        var intervalExpertNegative = "-" + intervalExpert;
-        var intervalExpertNegativeNum = parseInt(intervalExpertNegative);
-        $(".expert_top_wave").css("top", intervalExpertNegativeNum);
-        $(".expert_top_wave").css("height", intervalExpert);
-    } else if($(window).width() == 1024) {
-        $(".expert_top_wave").css("top", ExpertNumNegativeTopWave);
-    } else {
-        var intervalExpert = (ExpertHeightTopWave * 75)/100;
-        var intervalExpertNegative = "-" + intervalExpert;
-        var intervalExpertNegativeNum = parseInt(intervalExpertNegative);
-        $(".expert_top_wave").css("top", intervalExpertNegativeNum);
-    }
-    
-    // var ExpertHeightBottomWave = $(".expert_bottom_wave").height();
-    // var ExpertNegativeBottomWave = "-" + ExpertHeightBottomWave;
-    // var ExpertNumNegativeBottomWave = parseInt(ExpertNegativeBottomWave);
-    // $(".expert_bottom_wave").css("bottom", ExpertNumNegativeBottomWave);
+    $(".dropdown_head_close").click(function() {
+        $(".dropdown").removeClass("active");
+    });
+
+    $(".main_top_wave_arrow").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".expert").offset().top
+        }, 2000);
+    });
+
+    $(".professional_content_form_quantity_minus").click(function(e) {
+        e.preventDefault();
+        var defaultValue = $(".professional_content_form_quantity input").val();
+        var defaultValueNum = parseInt(defaultValue);
+        var finalResultValue = defaultValueNum - 1;
+        if(finalResultValue == 0) {
+            return false;
+        } else {
+            $(".professional_content_form_quantity input").val(finalResultValue);
+        }
+    });
 
 
-    // var CosmeticsHeightTopWave = $(".cosmetics_top_wave").height();
-    // var CosmeticsNegativeTopmWave = "-" + CosmeticsHeightTopWave;
-    // var CosmeticsNumNegativeTopWave = parseInt(CosmeticsNegativeTopmWave);
-    // $(".cosmetics_top_wave").css("top", CosmeticsNumNegativeTopWave);
+    $(".professional_content_form_quantity_plus").click(function(e) {
+        e.preventDefault();
+        var defaultValue = $(".professional_content_form_quantity input").val();
+        var ResultValueNum = parseInt(defaultValue);
+        var finalResultValue = ResultValueNum + 1;
+        $(".professional_content_form_quantity input").val(finalResultValue);
+    });
 
-    // 247 - 100%
-    // x - 64%
+    $(".faq_content_main_list_item").click(function() {
+        $(this).toggleClass("active");
+    });
 
+    $(".cosmetics_content_recommendation_list_item").click(function() {
+        $(".popup").removeClass("active");
+        $(".modal_back").removeClass("active");
+        var id = $(this).attr("id");
+        $(".popup").each(function() {
+            var dataId = $(this).attr("data-id");
+            if(dataId == id) {
+                $(".modal_back").addClass("active");
+                $(this).addClass("active");
+            }
+        });
+    });
+
+    $(".modal_back").click(function() {
+        $(".popup").removeClass("active");
+        $(this).removeClass("active");
+    });
     
     var CosmeticsHeightBottomWave = $(".cosmetics_bottom_wave").height();
     var CosmeticsNegativeBottomWave = "-" + CosmeticsHeightBottomWave;
     var CosmeticsNumNegativeBottomWave = parseInt(CosmeticsNegativeBottomWave);
     $(".cosmetics_bottom_wave").css("bottom", CosmeticsNumNegativeBottomWave);
-    
-    // if($(window).width() < 767) {
-    //     $(".cosmetics_bottom_wave").css("bottom", CosmeticsNumNegativeBottomWave);
-    // } else {
-    //     var halfCosmetics = (CosmeticsHeightBottomWave * 50)/100;
-    //     var intervalCosmetics = (CosmeticsHeightBottomWave * 35)/100;
-    //     //$(".cosmetics_bottom_wave").css("height", halfCosmetics);
-    //     var intervalCosmeticsNegative = "-" + intervalCosmetics;
-    //     var intervalCosmeticsNegativeeNum = parseInt(intervalCosmeticsNegative);
-    //     $(".cosmetics_bottom_wave").css("bottom", intervalCosmeticsNegativeeNum);
-    // }
 
-    // var FaqHeightTopWave = $(".faq_wave_top").height();
-    // var FaqNegativeTopWave = "-" + FaqHeightTopWave;
-    // var FaqNumNegativeTopWave = parseInt(FaqNegativeTopWave);
-    // $(".faq_wave_top").css("top", FaqNumNegativeTopWave);
-
-    // var FaqHeightBottomWave = $(".cosmetics_bottom_wave").height();
-    // var FaqNegativeBottomWave = "-" + FaqHeightBottomWave;
-    // var FaqNumNegativeBottomWave = parseInt(FaqNegativeBottomWave);
-    // $(".faq_wave_bottom").css("bottom", FaqNumNegativeBottomWave);
+    $("input[type='tel']").mask("+7 (999) 999-99-99");
 
 });

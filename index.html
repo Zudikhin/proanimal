@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+
     <header class="header">
       <div class="header_content">
         <div class="header_content_logo">
@@ -22,8 +23,17 @@
       </div>
     </header>
 
-    <!-- <div class="dropdown">
-      <ul>
+    <div class="dropdown">
+      <div class="dropdown_head">
+        <div class="dropdown_head_logo">
+          <img src="img/header/logo.png" alt="">
+        </div>
+        <div class="dropdown_head_close">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <ul class="dropdown_nav">
         <li>
           <a href="#">О нас</a>
         </li>
@@ -43,7 +53,21 @@
           <a href="#">Политика конфиденциальности</a>
         </li>
       </ul>
-    </div> -->
+      <div class="dropdown_links">
+        <span>Мы в соцсетях:</span>
+        <div class="dropdown_links_list">
+          <a href="#">
+            <img src="img/header/vk.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/header/insta.png" alt="">
+          </a>
+          <a href="#">
+            <img src="img/header/youtube.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
 
     <section class="main">
       <div class="container">
@@ -55,10 +79,15 @@
           </button>
         </div>
       </div>
+      <div class="main_top_wave">
+        <button class="main_top_wave_arrow">
+          <img src="img/main/arrow.png" alt="">
+        </button>
+        <img class="main_top_wave_image" src="img/main/top_wave.png" alt="">
+      </div>
     </section>
 
     <section class="expert">
-      <img class="expert_top_wave" src="img/expert/top_wave.png" alt="">
       <div class="container">
         <div class="expert_content">
             <h2><span>Эксперт</span> по уходу <br>
@@ -207,7 +236,7 @@
               </div>
               <div class="cosmetics_content_using_list">
                 <div class="cosmetics_content_using_list_item">
-                  <span>1</span>
+                  <span class="cosmetics_content_using_list_item_one">1</span>
                   <div class="cosmetics_content_using_list_item_info">
                     <h4>Base Superclean</h4>
                     <p class="cosmetics_content_using_list_item_info_text_white">Шампунь Base Superclean или
@@ -217,7 +246,7 @@
                 </div>
 
                 <div class="cosmetics_content_using_list_item">
-                  <span>2</span>
+                  <span class="cosmetics_content_using_list_item_two">2</span>
                   <div class="cosmetics_content_using_list_item_info">
                     <h4>AquaVita</h4>
                     <p class="cosmetics_content_using_list_item_info_text_white">Шампунь для  увлажнения и оздоровления</p>
@@ -226,7 +255,7 @@
                 </div>
 
                 <div class="cosmetics_content_using_list_item">
-                  <span>3</span>
+                  <span class="cosmetics_content_using_list_item_three">3</span>
                   <div class="cosmetics_content_using_list_item_info">
                     <h4>Shine&Care Conditioner</h4>
                     <p class="cosmetics_content_using_list_item_info_text_white">Бальзам для легкого расчесывания и восстановления</p>
@@ -235,7 +264,7 @@
                 </div>
 
                 <div class="cosmetics_content_using_list_item">
-                  <span>4</span>
+                  <span class="cosmetics_content_using_list_item_four">4</span>
                   <div class="cosmetics_content_using_list_item_info">
                     <p class="cosmetics_content_using_list_item_info_text_red">
                       Укутайте собаку в полотенце на 3-5 минут
@@ -250,7 +279,8 @@
             <div class="cosmetics_content_recommendation">
               <h2>Эксперты <span>рекомендуют</span></h2>
               <div class="cosmetics_content_recommendation_list">
-                <div class="cosmetics_content_recommendation_list_item">
+
+                <div id="review_one" class="cosmetics_content_recommendation_list_item">
 
                   <div class="cosmetics_content_recommendation_list_item_info">
                     <div class="cosmetics_content_recommendation_list_item_info_ava">
@@ -259,7 +289,7 @@
                     <div class="cosmetics_content_recommendation_list_item_info_text">
                       <h5>Зверский Стиль</h5>
                       <span>Сеть груминг салонов</span>
-                      <a href="#">@zverskistil.ru</a>
+                      <span>@zverskistil.ru</span>
                     </div>
                   </div>
 
@@ -269,7 +299,7 @@
 
                 </div>
 
-                <div class="cosmetics_content_recommendation_list_item">
+                <div id="review_two" class="cosmetics_content_recommendation_list_item">
                   <div class="cosmetics_content_recommendation_list_item_info">
                     <div class="cosmetics_content_recommendation_list_item_info_ava">
                       <img src="img/recommendation/logo2.png" alt="">
@@ -277,7 +307,7 @@
                     <div class="cosmetics_content_recommendation_list_item_info_text">
                       <h5>Ксюша Головкина</h5>
                       <span>Кинолог СПб</span>
-                      <a href="#">@zverskistil.ru</a>
+                      <span>@zverskistil.ru</span>
                     </div>
                   </div>
                   <div class="cosmetics_content_recommendation_list_item_text">
@@ -301,6 +331,16 @@
         <img class="cosmetics_feature_image_four" src="img/cosmetics/circle_3.png" alt="">
         <img class="cosmetics_feature_image_five" src="img/cosmetics/circle_8.png" alt="">
         <img class="cosmetics_feature_image_six" src="img/cosmetics/small_circle_4.png" alt="">
+        <img class="cosmetics_feature_image_seven" src="img/cosmetics/semicircle_feature.png" alt="">
+        <img class="cosmetics_feature_image_eight" src="img/cosmetics/circle_1.png" alt="">
+        <img class="cosmetics_feature_image_nine" src="img/cosmetics/circle_9.png" alt="">
+        <img class="cosmetics_feature_image_ten" src="img/cosmetics/circle_1.png" alt="">
+        <img class="cosmetics_feature_image_eleven" src="img/cosmetics/circle_4.png" alt="">
+        <img class="cosmetics_feature_image_twelve" src="img/cosmetics/big_feature.png" alt="">
+        <img class="cosmetics_feature_image_thirteen" src="img/cosmetics/heart.png" alt="">
+        <img class="cosmetics_feature_image_fourteen" src="img/cosmetics/circle_7.png" alt="">
+        <img class="cosmetics_feature_image_fifteen" src="img/cosmetics/small_circle_1.png" alt="">
+        <img class="cosmetics_feature_image_sixteen" src="img/cosmetics/circle_10.png" alt="">
       </div>
     </section>
 
@@ -323,6 +363,11 @@
         <img src="img/questions/dog.png" alt="">
       </div>
       <img class="questions_wave_bottom" src="img/faq/faq_wave_top.png" alt="">
+      <div class="questions_feature_image">
+        <img class="questions_feature_image_one" src="img/questions/circle_1.png" alt="">
+        <!-- <img class="questions_feature_image_two" src="img/questions/circle_2.png" alt="">
+        <img class="questions_feature_image_three" src="img/questions/small_circle_1.png" alt=""> -->
+      </div>
     </section>
 
     <section class="faq">
@@ -332,7 +377,7 @@
           <p class="faq_content_tagline">Часто задаваемые вопросы о наших продуктах вы сможете найти здесь</p>
           <div class="faq_content_main">
             <div class="faq_content_main_img">
-                <img class="faq_content_main_img_d" src="img/faq/dog.jpg" alt="">
+                <img class="faq_content_main_img_d" src="img/faq/dog.png" alt="">
                 <img class="faq_content_main_img_q" src="img/faq/question.png" alt="">
             </div>
             <div class="faq_content_main_list">
@@ -489,6 +534,14 @@
           </div>
         </div>
       </div>
+      <div class="about_feature_image">
+        <img class="about_feature_image_one" src="img/about/circle_1.png" alt="">
+        <img class="about_feature_image_two" src="img/about/circle_2.png" alt="">
+        <img class="about_feature_image_three" src="img/about/circle_3.png" alt="">
+        <img class="about_feature_image_four" src="img/about/circle_4.png" alt="">
+        <img class="about_feature_image_five" src="img/about/circle_5.png" alt="">
+        <img class="about_feature_image_six" src="img/about/circle_6.png" alt="">
+      </div>
     </section>
 
     <footer class="footer">
@@ -554,7 +607,56 @@
       </div>
     </footer>
 
+    <div class="modal_back"></div>
+
+    <div data-id="review_two" class="popup">
+      <div class="popup_image">
+        <img src="img/popup/dogs_1.png" alt="">
+      </div>
+      <div class="popup_content">
+        <div class="popup_content_info">
+          <div class="popup_content_info_ava">
+            <img src="img/recommendation/logo2.png" alt="">
+          </div>
+          <div class="popup_content_info_text">
+            <h5>Ксюша Головкина</h5>
+            <span>Кинолог СПб</span>
+            <span>@zverskistil.ru</span>
+          </div>
+        </div>
+        <div class="popup_content_text">
+          <p>Меня часто спрашивают, чем я мою собак и как часто. Рассказываю🤗</p>
+          <p>Лапы и пузо мы моем после каждой прогулки, а вот целиком не чаще раза в месяц. Кто то считает, что это редко, сравнивает собак с собой. Как так, ведь мы, люди, моемся каждый день (ну или почти каждый день), значит и собак надо мыть, особенно, если им позволено спать в хозяйской кровати. На самом деле собак мыть часто совсем не обязательно, но если очень хочется, то нужно использовать только проф косметику, которая не будет смывать защитный слой кожи. Если же мыть часто и не качественным шампунем или не подходящим конкретно вашей собаке, то вы столкнетесь с такими проблемами, как перхоть и выпадение шерсти. Также не рекомендую сильно пахнущую косметику. Это нам нравится запах клубнички или ванили, а вот собака это может не оценить. Ей будет от этого не комфортно и она постарается это исправить. Как показывает практика запах тухлячка им нравится больше, чем запах фруктов и цветочков😂</p>
+          <p>В отопительный сезон советую использовать после шампуня бальзам. В этот период кожа и шерсть нуждается в увлажнении и питании больше, чем обычно. Если собака пушистая, то ещё и маску. Вот тут уже как у людей, девушки поймут😁</p>
+          <p>(Листай карусель и смотри, как я мою собак).</p>
+          <p>Косметика от @proanimal.ru. Хорошо промывает и имеет ненавязчивый запах. После бальзама шерсть мягкая и приятная на ощупь. Это профессиональная косметика, многие грумеры пользуются именно ей.</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-id="review_one" class="popup">
+      <div class="popup_image">
+        <img src="img/popup/dogs_2.png" alt="">
+      </div>
+      <div class="popup_content">
+        <div class="popup_content_info">
+          <div class="popup_content_info_ava">
+            <img src="img/recommendation/logo2.png" alt="">
+          </div>
+          <div class="popup_content_info_text">
+            <h5>Зверский Стиль</h5>
+            <span>Сеть груминг салонов</span>
+            <span>@zverskistil.r</span>
+          </div>
+        </div>
+        <div class="popup_content_text">
+          <p>Наши четвероногие друзья нуждаются в регулярной заботе и уходе. У собак очень нежная кожа, требующая особого подхода. Первая и самая популярная причина плохого качества шерсти собаки – редкое купание и применение неспециализированных средств для мытья шерсти. Линейка разработанных средств PROANIMAL способна дать эффективное решение для каждого типа шерсти в уходе за собакой. Продукция разработана специально для профессионального ухода. Использование профессиональных и качественных средств помогут избежать появление дерматита, перхоти и прочих опасных для жизни животного заболеваний.</p>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
