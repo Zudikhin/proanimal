@@ -64,9 +64,19 @@ $(document).ready(function () {
         }
     });
 
+    $(".main_content_btn").click(function() {
+        $(".modal_back").addClass("active");
+        $(".feedback_form").addClass("active");
+    });
+
+    $(".professional_content_form_submit").click(function() {
+        $(".modal_back").addClass("active");
+        $(".feedback_form").addClass("active");
+    });
 
     $(".modal_back").click(function() {
         $(".popup").removeClass("active");
+        $(".feedback_form").removeClass("active");
         $(this).removeClass("active");
     });     
 
