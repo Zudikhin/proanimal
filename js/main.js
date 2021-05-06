@@ -53,6 +53,18 @@ $(document).ready(function () {
         });
     });
 
+    $(".dropdown_nav li a").click(function(e) {
+        var dataId = $(this).attr("data-id");
+        if(dataId) {
+            e.preventDefault();
+            $(".dropdown").removeClass("active");
+            $('html, body').animate({
+                scrollTop: $("#" + dataId).offset().top
+            }, 2000);
+        }
+    });
+
+
     $(".modal_back").click(function() {
         $(".popup").removeClass("active");
         $(this).removeClass("active");

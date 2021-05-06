@@ -411,7 +411,13 @@ div:focus {
 .dropdown_links {
   position: absolute;
   left: 33px;
-  bottom: 30px;
+  bottom: 100px;
+}
+
+@media (min-width: 576px) {
+  .dropdown_links {
+    bottom: 30px;
+  }
 }
 
 .dropdown_links span {
@@ -671,7 +677,6 @@ div:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  overflow-x: hidden;
 }
 
 .expert_top_wave {
@@ -1038,7 +1043,7 @@ div:focus {
 }
 
 .expert_feature_image_eight {
-  right: -40px;
+  right: 0px;
   top: 470px;
 }
 
@@ -2566,12 +2571,16 @@ div:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
 }
 
 .questions_img img {
   width: 80%;
+  height: auto;
 }
 
 @media (min-width: 576px) {
