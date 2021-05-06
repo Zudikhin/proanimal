@@ -56,16 +56,7 @@ $(document).ready(function () {
     $(".modal_back").click(function() {
         $(".popup").removeClass("active");
         $(this).removeClass("active");
-    });
-
-    function heightwave() {
-        var CosmeticsHeightBottomWave = $(".cosmetics_bottom_wave").height();
-        var CosmeticsNegativeBottomWave = "-" + CosmeticsHeightBottomWave;
-        var CosmeticsNumNegativeBottomWave = parseInt(CosmeticsNegativeBottomWave);
-        $(".cosmetics_bottom_wave").css("bottom", CosmeticsNumNegativeBottomWave);
-    }
-
-    heightwave();       
+    });     
 
     $("input[type='tel']").mask("+7 (999) 999-99-99");
 
