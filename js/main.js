@@ -57,11 +57,15 @@ $(document).ready(function () {
         $(".popup").removeClass("active");
         $(this).removeClass("active");
     });
-    
-    var CosmeticsHeightBottomWave = $(".cosmetics_bottom_wave").height();
-    var CosmeticsNegativeBottomWave = "-" + CosmeticsHeightBottomWave;
-    var CosmeticsNumNegativeBottomWave = parseInt(CosmeticsNegativeBottomWave);
-    $(".cosmetics_bottom_wave").css("bottom", CosmeticsNumNegativeBottomWave);
+
+    function heightwave() {
+        var CosmeticsHeightBottomWave = $(".cosmetics_bottom_wave").height();
+        var CosmeticsNegativeBottomWave = "-" + CosmeticsHeightBottomWave;
+        var CosmeticsNumNegativeBottomWave = parseInt(CosmeticsNegativeBottomWave);
+        $(".cosmetics_bottom_wave").css("bottom", CosmeticsNumNegativeBottomWave);
+    }
+
+    heightwave();       
 
     $("input[type='tel']").mask("+7 (999) 999-99-99");
 
