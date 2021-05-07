@@ -282,7 +282,7 @@ div:focus {
     margin-top: 28px;
   }
   .header_content_logo {
-    width: 236px;
+    width: 200px;
     margin-left: 30px;
   }
   .header_content_btn {
@@ -665,9 +665,30 @@ div:focus {
     display: block;
     position: absolute;
     left: 50%;
-    top: 100px;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .main_top_wave {
+    width: 100%;
+    bottom: -80px;
+  }
+  .main_top_wave_arrow {
+    top: 70px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main_top_wave {
+    bottom: -40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .main_top_wave {
+    bottom: -60px;
   }
 }
 
@@ -2916,6 +2937,15 @@ div:focus {
   }
 }
 
+.faq_content_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .faq_content_main_img {
   display: none;
 }
@@ -2932,7 +2962,6 @@ div:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 292px;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -3028,7 +3057,9 @@ div:focus {
   .faq_content_main_img {
     display: block;
     width: 50%;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 30px;
   }
   .faq_content_main_img_d {
     width: 80%;
@@ -3036,29 +3067,39 @@ div:focus {
   .faq_content_main_img_q {
     position: absolute;
     right: 50px;
-    top: 0px;
+    top: -20px;
     width: 90px;
+  }
+  .faq_content_main_list {
+    margin-left: auto;
   }
 }
 
 @media (min-width: 1024px) {
+  .faq_content_main_img_d {
+    width: 70%;
+  }
   .faq_content_main_img_q {
     width: 100px;
-    right: 80px;
+    right: 110px;
   }
 }
 
 @media (min-width: 1200px) {
+  .faq_content_main {
+    margin-top: 50px;
+  }
   .faq_content_main_img {
     -webkit-transform: translateX(-50px);
             transform: translateX(-50px);
   }
   .faq_content_main_img_d {
-    width: 484px;
+    width: 434px;
   }
   .faq_content_main_img_q {
-    width: 154px;
-    right: 60px;
+    width: 138px;
+    right: 105px;
+    top: -50px;
   }
   .faq_content_main_list_item {
     margin-top: 20px;
@@ -3089,6 +3130,24 @@ div:focus {
 
 .about_content {
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .about_content {
+    margin-top: -130px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about_content {
+    margin-top: -110px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about_content {
+    margin-top: -180px;
+  }
 }
 
 .about_content_reviews h2 {
@@ -3565,7 +3624,13 @@ div:focus {
 
 @media (min-width: 1200px) {
   .about_bottom_wave {
-    top: 250px;
+    top: 258px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .about_bottom_wave {
+    top: 200px;
   }
 }
 

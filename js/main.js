@@ -64,6 +64,16 @@ $(document).ready(function () {
         }
     });
 
+    $(".footer_content_middle_nav ul li a").click(function(e) {
+        var dataId = $(this).attr("data-id");
+        if(dataId) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $("#" + dataId).offset().top
+            }, 2000);
+        }
+    });
+
     $(".main_content_btn").click(function() {
         $(".modal_back").addClass("active");
         $(".feedback_form").addClass("active");
