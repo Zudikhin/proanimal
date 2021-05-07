@@ -3,10 +3,12 @@ $(document).ready(function () {
 
     $(".header_content_btn").click(function() {
         $(".dropdown").addClass("active");
+        $(".modal_back").addClass("active");
     });
 
     $(".dropdown_head_close").click(function() {
         $(".dropdown").removeClass("active");
+        $(".modal_back").removeClass("active");
     });
 
     $(".main_top_wave_arrow").click(function() {
@@ -58,6 +60,7 @@ $(document).ready(function () {
         if(dataId) {
             e.preventDefault();
             $(".dropdown").removeClass("active");
+            $(".modal_back").removeClass("active");
             $('html, body').animate({
                 scrollTop: $("#" + dataId).offset().top
             }, 2000);
@@ -86,6 +89,7 @@ $(document).ready(function () {
 
     $(".modal_back").click(function() {
         $(".popup").removeClass("active");
+        $(".dropdown").removeClass("active");
         $(".feedback_form").removeClass("active");
         $(this).removeClass("active");
     });     
