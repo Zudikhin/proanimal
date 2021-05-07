@@ -680,18 +680,6 @@ div:focus {
   }
 }
 
-@media (min-width: 1440px) {
-  .main_top_wave {
-    bottom: -40px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .main_top_wave {
-    bottom: -60px;
-  }
-}
-
 .expert {
   background-color: #F8BCBB;
   background-repeat: no-repeat;
