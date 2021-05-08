@@ -92,7 +92,46 @@ $(document).ready(function () {
         $(".dropdown").removeClass("active");
         $(".feedback_form").removeClass("active");
         $(this).removeClass("active");
-    });     
+    });
+    
+    $(".feedback_form_content_name input").focus(function() {
+        $(".feedback_form_content_name").addClass("focus");
+    });
+
+    $(".feedback_form_content_name input").focusout(function() {
+        //$(".feedback_form_content_name").removeClass("focus");
+        if($(this).val()) {
+            $(".feedback_form_content_name").addClass("focus");
+        } else {
+            $(".feedback_form_content_name").removeClass("focus");
+        }
+    });
+
+    $(".feedback_form_content_tel input").focus(function() {
+        $(".feedback_form_content_tel").addClass("focus");
+    });
+
+    $(".feedback_form_content_tel input").focusout(function() {
+        var str = $(this).val();
+        if (str.indexOf('_') == -1) {
+            $(".feedback_form_content_tel").addClass("focus");
+        } else {
+            $(".feedback_form_content_tel").removeClass("focus");
+        }       
+    });
+
+    $(window).scroll(function() {
+       var offsetTop = $(window).scrollTop();
+       if(offsetTop > 200) {
+           $(".back_top").addClass("visible");
+       } else {
+            $(".back_top").removeClass("visible");
+       }
+    });
+
+    $(".back_top").click(function() {
+        $("html, body").animate({scrollTop: 0}, 2000);
+    });
 
     $("input[type='tel']").mask("+7 (999) 999-99-99");
 

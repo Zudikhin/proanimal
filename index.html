@@ -13,7 +13,9 @@
     <header class="header">
       <div class="header_content">
         <div class="header_content_logo">
-          <img src="img/header/logo.png" alt="">
+          <a href="/">
+            <img src="img/header/logo.png" alt="">
+          </a>
         </div>
         <div class="header_content_btn">
           <span></span>
@@ -422,7 +424,7 @@
 
     <section class="about">
       <img class="about_wave_top" src="img/faq/faq_wave_bottom.png" alt="">
-      <img class="about_main_img" src="img/about/about_main_image.jpg" alt="">
+      <img class="about_main_img" src="img/about/about_main_image.png" alt="">
       <img class="about_bottom_wave" src="img/about/wave_bottom.png" alt="">
       <div class="container">
         <div class="about_content">
@@ -548,7 +550,9 @@
       <div class="container">
         <div class="footer_content">
           <div class="footer_content_logo">
-            <img src="img/footer/logo.png" alt="">
+            <a href="/">
+              <img src="img/footer/logo.png" alt="">
+            </a>
           </div>
           <div class="footer_content_middle">
             <div class="footer_content_middle_nav">
@@ -658,18 +662,27 @@
     <div class="feedback_form">
       <div class="feedback_form_content">
         <form action="">
-          <label for="">
-            <input type="text" placeholder="Имя *">
-          </label>
-          <label for="">
-            <input type="tel" placeholder="Tелефон *">
-          </label>
+          <div class="feedback_form_content_name">
+            <label for="">Имя *</label>
+            <input type="text">
+          </div>
+
+          <div class="feedback_form_content_tel">
+            <label for="">Tелефон *</label>
+            <input type="tel">
+          </div>
+
           <button type="submit">
             <span>Оформить Заказ</span>
           </button>
+
         </form>
       </div>
     </div>
+
+    <button class="back_top">
+      <img src="img/back_top.jpg" alt="">
+    </button>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
