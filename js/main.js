@@ -130,9 +130,10 @@ $(document).ready(function () {
     });
 
     $(".back_top").click(function() {
-        $("html, body").animate({scrollTop: 0}, 2000);
+        $("html, body").animate({scrollTop: 0}, 1200);
     });
 
     $("input[type='tel']").mask("+7 (999) 999-99-99");
+
 
 });
